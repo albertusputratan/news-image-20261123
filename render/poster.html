@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Monday 23 November 2026</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 1024px; height: 1024px; background: #F5F0E6; overflow: hidden; }
+  * { box-sizing: border-box; }
+  .plate {
+    width: 1024px; height: 1024px; padding: 16px; background: #F5F0E6;
+    display: grid;
+    grid-template-rows: 14px 74px 16px 2px 57px 2px 30px 2px 274px 3px 240px 2px 211px 2px 51px 12px;
+    font-family: Inter, "Source Sans 3", "Source Sans Pro", Roboto, sans-serif;
+    color: #1C1612;
+  }
+  .plate > * { min-width: 0; min-height: 0; }
+  .kicker-row { display: grid; grid-template-columns: 1fr 1fr; align-items: center; font-size: 11px; line-height: 1.2; letter-spacing: 0.04em; }
+  .kicker-row .left { text-align: left; font-weight: 650; }
+  .kicker-row .right { text-align: right; font-weight: 500; }
+  h1.date { margin: 0; font-family: "Playfair Display", "Source Serif Pro", serif; font-weight: 600; font-size: 64px; line-height: 1.15; letter-spacing: -0.015em; }
+  .stand { margin: 0; font-family: "Source Serif Pro", serif; font-size: 12px; line-height: 1.3; color: #3A342C; }
+  .rule { background: linear-gradient(#1C1612, #1C1612) 0 50% / 100% 1px no-repeat; }
+  .zones { height: 57px; padding: 8px 0; background: #EFE6D4; }
+  .zones-title { height: 12px; text-align: center; font-size: 10px; line-height: 12px; letter-spacing: 0.08em; font-weight: 650; }
+  .zones-row { margin-top: 2px; display: grid; grid-template-columns: repeat(6, 1fr); }
+  .zones-row div { text-align: center; }
+  .zones-row b, .zones-row i { display: block; font-style: normal; }
+  .zones-row b { height: 12px; font-size: 10px; line-height: 12px; font-weight: 600; }
+  .zones-row i { margin-top: 2px; height: 13px; font-size: 10px; line-height: 13px; font-weight: 400; color: #3A342C; }
+  .regions { display: grid; grid-template-columns: repeat(7, 1fr); height: 30px; }
+  .regions span { display: block; height: 30px; padding: 8px 6px; text-align: left; color: #F5F0E6; font-size: 11px; line-height: 1.2; font-weight: 650; white-space: nowrap; }
+  .leads { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; height: 274px; }
+  .lead, .mid { min-width: 0; }
+  .lead { height: 274px; padding: 8px; background: #FBF7EF; box-shadow: inset 0 0 0 1px #E0D5C4; display: flex; flex-direction: column; overflow: hidden; }
+  .lead .art, .mid .art { position: relative; background: #E7D3B0; overflow: hidden; min-width: 0; }
+  .lead .art { height: 132px; flex: 0 0 132px; margin: 0 -8px; width: calc(100% + 16px); }
+  .lead .art img, .lead .art svg, .mid .art svg { width: 100%; height: 100%; min-width: 0; display: block; object-fit: cover; }
+  .filechip { position: absolute; top: 6px; left: 6px; background: #F5F0E6; color: #1C1612; font-size: 8px; line-height: 1.3; letter-spacing: 0.04em; font-weight: 700; padding: 1px 4px; }
+  .chip { position: absolute; left: 6px; bottom: 6px; display: flex; align-items: center; gap: 4px; background: #9C2B24; color: #F5F0E6; font-size: 9px; line-height: 1.2; font-weight: 650; padding: 3px 6px 3px 4px; }
+  .lead .credit { margin: 8px 0 0; height: 11px; font-size: 8px; line-height: 11px; color: #5E584E; white-space: nowrap; }
+  .lead .kicker { margin: 8px 0 0; height: 12px; font-size: 10px; line-height: 12px; letter-spacing: 0.06em; font-weight: 700; text-transform: uppercase; text-align: left; }
+  .lead h2 { margin: 0; height: 40px; font-family: "Playfair Display", "Source Serif Pro", serif; font-weight: 600; font-size: 17px; line-height: 20px; text-align: left; }
+  .lead .deck { margin: 4px 0 0; height: 30px; font-family: "Source Serif Pro", serif; font-size: 11px; line-height: 15px; text-align: left; }
+  .lead .meta { margin: 0; height: 13px; display: flex; justify-content: flex-start; align-items: baseline; gap: 6px; font-size: 10px; line-height: 13px; text-align: left; }
+  .lead .src { color: #5E584E; }
+  .mids { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); grid-auto-rows: 116px; gap: 8px; height: 240px; }
+  .mid { height: 116px; padding: 8px; background: #FBF7EF; box-shadow: inset 0 0 0 1px #E0D5C4; overflow: hidden; display: flex; flex-direction: column; }
+  .mid .art { height: 60px; flex: 0 0 60px; margin: 0 -8px; width: calc(100% + 16px); }
+  .mid h3 { margin: 8px 0 0; font-family: "Playfair Display", "Source Serif Pro", serif; font-weight: 600; font-size: 13px; line-height: 1.2; text-align: left; white-space: nowrap; overflow: hidden; }
+  .mid .deck { margin: 3px 0 0; display: flex; align-items: baseline; gap: 6px; min-width: 0; font-family: "Source Serif Pro", serif; font-size: 10px; line-height: 1.3; text-align: left; color: #2A241E; }
+  .mid .deck .txt { min-width: 0; overflow: hidden; white-space: nowrap; }
+  .mid .deck .tag { flex: none; white-space: nowrap; }
+  .tag { font-weight: 700; letter-spacing: 0.02em; }
+  .bottom { display: grid; grid-template-columns: 330px 8px 1fr; height: 211px; }
+  .map { height: 211px; padding: 8px; background: #C5D7E6; box-shadow: inset 0 0 0 1px #E0D5C4; overflow: hidden; }
+  .briefs { height: 211px; padding: 8px; background: #FBF7EF; box-shadow: inset 0 0 0 1px #E0D5C4; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; overflow: hidden; }
+  .bcol { display: flex; flex-direction: column; gap: 2px; text-align: left; }
+  .bcol h3 { margin: 0; font-size: 10px; line-height: 1.2; font-weight: 700; letter-spacing: 0.04em; text-align: left; }
+  .bcol p { margin: 0; font-size: 10px; line-height: 1.3; text-align: left; }
+  .datecheck { margin: 0; padding: 6px 8px; background: #9C2B24; color: #F5F0E6; font-size: 10px; line-height: 1.3; overflow: hidden; }
+  .datecheck strong { font-weight: 700; }
+  footer { margin: 0; height: 12px; font-size: 8px; line-height: 1.3; color: #5E584E; }
+</style>
+</head>
+<body>
+  <div class="plate">
+    <div class="kicker-row"><div class="left">THE DAY IN ONE PAGE</div><div class="right">45 STORIES · 7 REGIONS · MONDAY 23 NOVEMBER 2026</div></div>
+    <h1 class="date">Monday 23 November 2026</h1>
+    <p class="stand">Asia&#39;s AI sell-off rolls on, COP31&#39;s collapse lands in Canberra, Nepal&#39;s PM in Delhi</p>
+    <div class="rule"></div>
+    <section class="zones">
+      <div class="zones-title">MONDAY ACROSS THE ZONES</div>
+      <div class="zones-row"><div><b>Seoul 09:00 KST</b><i>KOSPI opens −2.8%</i></div><div><b>Canberra AM</b><i>Taylor: &quot;Bowen has got to go&quot;</i></div><div><b>Wellington</b><i>NZ 207-5, in play</i></div><div><b>Manila</b><i>jeepney strike day 1</i></div><div><b>New Delhi</b><i>Shah–Modi talks</i></div><div><b>London 14:30 GMT</b><i>Finance Bill (scheduled)</i></div></div>
+    </section>
+    <div></div>
+    <div class="regions"><span style="background:#0E6A6A">OCE 12</span><span style="background:#9C2B24">EAS 13</span><span style="background:#8A5600">SAS 5</span><span style="background:#1E6B45">AFR 4</span><span style="background:#6A3A86">MEA 3</span><span style="background:#1F4E8C">EUR 3</span><span style="background:#3E4C22">AME 5</span></div>
+    <div></div>
+    <section class="leads"><article class="lead">
+    <div class="art"><img src="../photos/seoul-night-iss.jpg" alt="File photo: Seoul at night from the ISS, 2025 · NASA" style="object-position:center center"/><div class="filechip">FILE PHOTO</div><div class="chip"><svg width="8" height="8" viewBox="0 0 8 8" aria-hidden="true"><path d="M1 1.5 H7 L4 6.5 Z" fill="#F5F0E6"/></svg><span>KOSPI −2.8% at open</span></div></div>
+    <p class="credit">File photo: Seoul at night from the ISS, 2025 · NASA</p>
+    <p class="kicker" style="color:#9C2B24">Markets</p>
+    <h2>Asia&#39;s AI sell-off<br>rolls on into Monday</h2>
+    <p class="deck">Opened −2.77% at 4,734.90. Samsung −3%, SK hynix −2.2%. Japan shut; fund ready.</p>
+    <p class="meta"><span class="src">Reuters · Yonhap</span><span class="tag" style="color:#1E6B45">CONFIRMED</span></p>
+  </article><article class="lead">
+    <div class="art"><img src="../photos/antalya-gulf-2010.jpg" alt="File photo: Gulf of Antalya from the ISS, 2010 · NASA" style="object-position:center center"/><div class="filechip">FILE PHOTO</div></div>
+    <p class="credit">File photo: Gulf of Antalya from the ISS, 2010 · NASA</p>
+    <p class="kicker" style="color:#0E6A6A">Climate</p>
+    <h2>COP31&#39;s collapse<br>lands in Canberra</h2>
+    <p class="deck">After Sunday&#39;s collapse. Taylor: Bowen &quot;has got to go&quot;. NZ would have backed the text.</p>
+    <p class="meta"><span class="src">SMH · RNZ · Reuters</span><span class="tag" style="color:#1F4E8C">REPORTED</span></p>
+  </article><article class="lead">
+    <div class="art"><img src="../photos/modi-2025.jpg" alt="File photo: Modi, 2025 · White House" style="object-position:center 20%"/><div class="filechip">FILE PHOTO</div></div>
+    <p class="credit">File photo: Modi, 2025 · White House</p>
+    <p class="kicker" style="color:#8A5600">Diplomacy</p>
+    <h2>Shah to meet Modi<br>in New Delhi</h2>
+    <p class="deck">Due today: energy, hydropower, trade and connectivity. No statement yet.</p>
+    <p class="meta"><span class="src">Indian Express · Nepal MoFA</span><span class="tag" style="color:#8A5600">SCHEDULED</span></p>
+  </article><article class="lead">
+    <div class="art"><svg viewBox="0 0 242 140" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect width="242" height="140" fill="#E7D3B0"/>
+    <circle cx="74" cy="96" r="34" fill="#1A1612"/>
+    <circle cx="74" cy="96" r="26" fill="none" stroke="#3A342C" stroke-width="1.2"/>
+    <circle cx="74" cy="96" r="16" fill="none" stroke="#4A4038" stroke-width="1"/>
+    <circle cx="74" cy="96" r="11" fill="#9C2B24"/>
+    <circle cx="74" cy="96" r="2.4" fill="#F5F0E6"/>
+    <rect x="132" y="62" width="86" height="58" rx="4" fill="#2A241C"/>
+    <rect x="140" y="70" width="70" height="40" fill="#141820"/>
+    <polygon points="168,73 169.6,76.4 173,78 169.6,79.6 168,83 166.4,79.6 163,78 166.4,76.4" fill="#F2D56A"/><polygon points="186,82 187.28,84.72 190,86 187.28,87.28 186,90 184.72,87.28 182,86 184.72,84.72" fill="#F2D56A"/><polygon points="154,86.5 155.12,88.88 157.5,90 155.12,91.12 154,93.5 152.88,91.12 150.5,90 152.88,88.88" fill="#F7F1E6"/><polygon points="176,95 176.96,97.04 179,98 176.96,98.96 176,101 175.04,98.96 173,98 175.04,97.04" fill="#F2D56A"/>
+    <text x="175" y="104" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#F5F0E6" letter-spacing="0.6">COUNTDOWN</text>
+    <rect x="146" y="120" width="5" height="10" fill="#2A241C"/>
+    <rect x="198" y="120" width="5" height="10" fill="#2A241C"/>
+    <ellipse cx="118" cy="58" rx="86" ry="14" fill="#6B3A22"/>
+    <ellipse cx="118" cy="54" rx="74" ry="9" fill="#8A4E2C"/>
+    <path d="M86 54 C90 18, 146 16, 152 54 Z" fill="#7A4324"/>
+    <path d="M118 22 C110 30, 112 40, 118 44 C124 40, 126 30, 118 22 Z" fill="#5C3018"/>
+    <rect x="96" y="46" width="44" height="6" rx="1" fill="#3A2418"/>
+  </svg></div>
+    <p class="credit"></p>
+    <p class="kicker" style="color:#0E6A6A">Obituary</p>
+    <h2>Molly Meldrum<br>dies at 83</h2>
+    <p class="deck">Albanese: &quot;Molly Meldrum loved music almost as much as we loved him.&quot;</p>
+    <p class="meta"><span class="src">SMH · RNZ</span><span class="tag" style="color:#1E6B45">CONFIRMED</span></p>
+  </article></section>
+    <div></div>
+    <section class="mids"><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <rect x="28" y="14" width="46" height="34" rx="6" fill="#F7F1E6" stroke="#1C1612" stroke-width="1.4"/>
+    <rect x="36" y="8" width="30" height="10" rx="2" fill="#9C2B24"/>
+    <rect x="40" y="22" width="22" height="14" rx="2" fill="#F4E4C4" stroke="#1C1612" stroke-width="1"/>
+    <path d="M78 18 h34 l8 8 v20 h-42 z" fill="#F7F1E6" stroke="#1C1612" stroke-width="1.4"/>
+    <text x="86" y="40" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#9C2B24">A$25</text>
+    <circle cx="132" cy="40" r="10" fill="none" stroke="#1C1612" stroke-width="1.3"/>
+    <path d="M132 34 v8 M128 40 h8" stroke="#1C1612" stroke-width="1.2"/></svg></div>
+    <h3>A$25 PBS fee held to 2030</h3>
+    <p class="deck"><span class="txt">Freeze costs A$242m.</span><span class="tag" style="color:#1E6B45">OFFICIAL</span></p>
+  </article><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <rect x="36" y="18" width="22" height="26" fill="#9C2B24"/>
+    <rect x="84" y="18" width="22" height="26" fill="#C47B00"/>
+    <rect x="132" y="23" width="22" height="21" fill="#1F4E8C"/>
+    <text x="47" y="15" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#1C1612">27</text>
+    <text x="95" y="15" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#1C1612">27</text>
+    <text x="143" y="16" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#1C1612">22</text>
+    <text x="47" y="54" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#3A342C">Labor</text>
+    <text x="95" y="54" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#3A342C">ON</text>
+    <text x="143" y="54" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#3A342C">LNP</text></svg></div>
+    <h3>Taylor overtakes Albanese</h3>
+    <p class="deck"><span class="txt">Labor 27, ON 27, LNP 22.</span><span class="tag" style="color:#1F4E8C">REPORTED</span></p>
+  </article><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <rect width="192" height="34" fill="#D5E6F0"/>
+    <path d="M0 34 L70 28 H192 V60 H0 Z" fill="#3E7A45"/>
+    <rect x="78" y="22" width="3" height="26" fill="#F3E6C8" stroke="#1C1612" stroke-width="0.6"/>
+    <rect x="88" y="18" width="3" height="30" fill="#F3E6C8" stroke="#1C1612" stroke-width="0.6"/>
+    <rect x="98" y="22" width="3" height="26" fill="#F3E6C8" stroke="#1C1612" stroke-width="0.6"/>
+    <rect x="76" y="18" width="10" height="2.2" fill="#F7F1E6" stroke="#1C1612" stroke-width="0.5"/>
+    <rect x="94" y="18" width="10" height="2.2" fill="#F7F1E6" stroke="#1C1612" stroke-width="0.5"/>
+    <circle cx="118" cy="40" r="4" fill="#B23A32" stroke="#1C1612" stroke-width="0.6"/></svg></div>
+    <h3>NZ 207-5, still in play</h3>
+    <p class="deck"><span class="txt">Mitchell, Phillips; trail 145.</span><span class="tag" style="color:#8A5600">IN PLAY</span></p>
+  </article><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <rect x="18" y="28" width="120" height="20" rx="3" fill="#C0392B" stroke="#1C1612" stroke-width="1.2"/>
+    <path d="M108 28 L138 32 V48 H108 Z" fill="#E8D5A3" stroke="#1C1612" stroke-width="1.2"/>
+    <rect x="28" y="32" width="22" height="10" fill="#D7EEF6" stroke="#1C1612" stroke-width="0.8"/>
+    <rect x="56" y="32" width="22" height="10" fill="#D7EEF6" stroke="#1C1612" stroke-width="0.8"/>
+    <circle cx="46" cy="50" r="7" fill="#1C1612"/>
+    <circle cx="46" cy="50" r="3" fill="#EFE2CC"/>
+    <circle cx="100" cy="50" r="7" fill="#1C1612"/>
+    <circle cx="100" cy="50" r="3" fill="#EFE2CC"/>
+    <rect x="126" y="10" width="52" height="14" fill="#1C1612"/>
+    <text x="152" y="20" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#F5F0E6">STRIKE</text></svg></div>
+    <h3>Jeepney strike, day one</h3>
+    <p class="deck"><span class="txt">6,000+ police; free rides.</span><span class="tag" style="color:#1E6B45">CONFIRMED</span></p>
+  </article><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <rect x="36" y="8" width="78" height="46" fill="#FBF7EF" stroke="#1C1612" stroke-width="1.3"/>
+    <path d="M46 20 h58 M46 28 h58 M46 36 h40" stroke="#C4B49A" stroke-width="1.4"/>
+    <path d="M118 40 L150 14" stroke="#C47B00" stroke-width="4" stroke-linecap="round"/>
+    <path d="M146 12 l10 2 -6 8 z" fill="#E0B15A" stroke="#1C1612" stroke-width="0.8"/>
+    <path d="M112 44 l8 6" stroke="#C47B00" stroke-width="3" stroke-linecap="round"/></svg></div>
+    <h3>Lee orders exam overhaul</h3>
+    <p class="deck"><span class="txt">Minister quit over AI.</span><span class="tag" style="color:#1F4E8C">REPORTED</span></p>
+  </article><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <path d="M34 14 L70 12 L92 22 L96 40 L78 50 L40 48 L28 30 Z" fill="#E7C56A" stroke="#1C1612" stroke-width="1.2"/>
+    <circle cx="128" cy="30" r="5" fill="none" stroke="#8A5600" stroke-width="2"/>
+    <circle cx="142" cy="30" r="5" fill="none" stroke="#8A5600" stroke-width="2"/>
+    <circle cx="156" cy="30" r="5" fill="none" stroke="#8A5600" stroke-width="2"/>
+    <circle cx="142" cy="44" r="7" fill="#F2D56A" stroke="#1C1612" stroke-width="1.2"/>
+    <path d="M142 40 v8 M138 44 h8" stroke="#1C1612" stroke-width="1"/></svg></div>
+    <h3>DA offers 93 mayoralties</h3>
+    <p class="deck"><span class="txt">137 councils, ActionSA no</span><span class="tag" style="color:#1F4E8C">REPORTED</span></p>
+  </article><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <rect x="14" y="12" width="40" height="28" fill="#111" stroke="#1C1612" stroke-width="0.8"/>
+    <rect x="14" y="21" width="40" height="6" fill="#fff"/>
+    <rect x="14" y="27" width="40" height="6" fill="#BB1E2D"/>
+    <rect x="14" y="33" width="40" height="7" fill="#1E6B45"/>
+    <rect x="138" y="12" width="40" height="28" fill="#2E6CB5" stroke="#1C1612" stroke-width="0.8"/>
+    <path d="M138 12 L178 40" stroke="#D7263D" stroke-width="6"/>
+    <polygon points="150,18 152,23 157,23 153,26 155,31 150,28 145,31 147,26 143,23 148,23" fill="#F2D56A"/>
+    <path d="M70 34 C78 22, 92 22, 96 32" fill="none" stroke="#1C1612" stroke-width="2" stroke-linecap="round"/>
+    <path d="M122 34 C114 22, 100 22, 96 32" fill="none" stroke="#1C1612" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="84" cy="30" r="4" fill="#F3D2B5" stroke="#1C1612" stroke-width="0.8"/>
+    <circle cx="108" cy="30" r="4" fill="#F3D2B5" stroke="#1C1612" stroke-width="0.8"/></svg></div>
+    <h3>Kenya, DRC restore ties</h3>
+    <p class="deck"><span class="txt">Agree to fully restore ties.</span><span class="tag" style="color:#1F4E8C">REPORTED</span></p>
+  </article><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <rect x="28" y="36" width="22" height="8" rx="3" fill="#6B4A32"/>
+    <rect x="54" y="36" width="22" height="8" rx="3" fill="#8A5A3A"/>
+    <rect x="40" y="42" width="10" height="6" fill="#1C1612"/>
+    <rect x="62" y="42" width="10" height="6" fill="#1C1612"/>
+    <g stroke="#1C1612" stroke-width="3">
+      <path d="M24 8 v44 M48 8 v44 M72 8 v44 M96 8 v44 M120 8 v44"/>
+    </g></svg></div>
+    <h3>1,389 children held in US</h3>
+    <p class="deck"><span class="txt">In US custody four years.</span><span class="tag" style="color:#1F4E8C">REPORTED</span></p>
+  </article><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <g fill="#1C1612">
+      <rect x="36" y="8" width="4" height="36"/>
+      <rect x="48" y="8" width="4" height="36"/>
+      <rect x="60" y="8" width="4" height="36"/>
+      <rect x="72" y="8" width="4" height="36"/>
+      <rect x="84" y="8" width="4" height="36"/>
+      <rect x="34" y="16" width="56" height="3"/>
+      <rect x="34" y="26" width="56" height="3"/>
+      <polygon points="36,44 40,52 32,52"/>
+      <polygon points="48,44 52,52 44,52"/>
+      <polygon points="60,44 64,52 56,52"/>
+      <polygon points="72,44 76,52 68,52"/>
+      <polygon points="84,44 88,52 80,52"/>
+    </g>
+    <rect x="104" y="18" width="74" height="22" fill="#FBF7EF" stroke="#9C2B24" stroke-width="1.3"/>
+    <text x="141" y="32" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#9C2B24">FINANCE BILL</text></svg></div>
+    <h3>Finance Bill set for MPs</h3>
+    <p class="deck"><span class="txt">Amendments already in.</span><span class="tag" style="color:#8A5600">SCHEDULED</span></p>
+  </article><article class="mid">
+    <div class="art"><svg viewBox="0 0 192 60" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="192" height="60" fill="#EFE2CC"/>
+    <path d="M20 50 A76 76 0 0 1 172 50" fill="none" stroke="#1F4E8C" stroke-width="8"/>
+    <path d="M36 50 A60 60 0 0 1 156 50" fill="none" stroke="#4E86C4" stroke-width="5"/>
+    <circle cx="96" cy="46" r="8" fill="#F2D56A" stroke="#1C1612" stroke-width="1"/>
+    <rect x="88" y="46" width="16" height="8" fill="#1C1612"/></svg></div>
+    <h3>Strasbourg plenary is set</h3>
+    <p class="deck"><span class="txt">Art. 7 Tue; athlete ban.</span><span class="tag" style="color:#8A5600">SCHEDULED</span></p>
+  </article></section>
+    <div></div>
+    <section class="bottom">
+      <div class="map"><svg viewBox="0 0 314 195" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map with story pins">
+    <rect width="314" height="195" fill="#C5D7E6"/>
+    <path d="M10.5 39.9L15.7 41.7L23.6 46.0L34.9 45.2L43.6 49.5L48.0 54.8L48.8 62.6L52.3 67.8L56.7 69.6L61.9 76.6L65.4 78.3L72.4 83.5L78.5 84.4L81.1 79.2L86.4 75.7L87.2 70.5L90.7 67.0L95.9 61.7L101.2 59.1L108.2 52.1L102.9 46.9L95.9 45.2L87.2 42.5L78.5 39.9L61.1 38.2L34.9 36.4L19.2 35.6L12.2 38.2L10.5 39.9 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M93.3 29.5L102.9 26.0L115.1 25.1L137.8 27.7L139.6 34.7L118.6 45.2L109.0 40.8L97.7 31.2L93.3 29.5 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M86.4 90.5L89.8 92.3L95.9 87.0L103.8 88.8L113.4 93.1L115.1 97.5L123.9 101.9L126.5 106.2L122.1 111.5L119.5 117.6L115.1 121.9L109.9 126.3L102.9 130.6L99.4 134.1L97.7 139.4L95.1 145.5L92.5 142.9L93.3 137.6L95.1 128.9L95.9 113.2L92.5 108.0L90.7 102.7L89.0 97.5L86.4 90.5 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M149.2 65.2L149.2 60.9L150.0 59.1L155.3 60.0L157.0 59.1L152.6 55.6L153.5 53.9L157.0 53.9L158.7 53.0L160.5 51.3L164.0 50.4L167.5 49.5L169.2 50.4L171.0 50.4L169.2 53.9L167.5 57.4L164.0 59.1L162.2 59.1L159.6 60.9L155.3 66.1L151.8 66.1L149.2 65.2 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M164.0 59.1L167.5 60.9L171.0 61.7L172.7 62.6L171.0 64.4L167.5 60.9L165.7 59.1L164.0 59.1 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M161.4 46.9L161.4 43.4L164.0 42.5L167.5 40.8L171.0 38.2L174.4 36.4L179.7 35.6L181.4 36.4L177.9 40.8L172.7 45.2L167.5 46.9L163.1 46.9L161.4 46.9 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M148.3 53.0L150.0 49.5L151.8 46.9L154.4 46.9L157.0 48.7L158.7 51.3L157.9 53.9L152.6 53.9L151.8 50.4L148.3 53.0 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M148.3 52.1L148.3 50.4L150.0 49.5L151.8 51.3L150.0 53.0L148.3 52.1 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M142.2 84.4L143.0 79.2L145.7 73.1L149.2 69.6L151.8 67.0L157.0 66.1L165.7 65.2L166.6 68.7L174.4 69.6L178.8 69.6L184.9 70.5L187.5 71.3L194.5 87.0L201.5 87.0L195.4 95.8L193.6 99.2L191.0 108.0L187.5 114.9L184.9 120.2L181.4 126.3L178.8 127.2L174.4 128.0L172.7 125.4L169.2 116.7L167.5 112.3L168.3 104.5L167.5 101.9L164.8 94.0L160.5 92.3L152.6 93.1L150.0 94.0L144.8 90.5L142.2 87.0L142.2 84.4 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M194.5 108.0L200.6 111.5L198.9 119.3L195.4 119.3L194.5 111.5L194.5 108.0 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M179.7 61.7L181.4 66.1L184.9 70.5L187.5 70.5L188.4 66.1L191.9 61.7L195.4 61.7L198.9 65.2L195.4 66.1L198.9 71.3L204.1 74.8L207.6 75.7L211.1 75.7L214.6 75.7L218.1 75.7L219.8 78.3L220.7 83.5L219.8 88.8L222.4 90.5L224.2 90.5L226.8 92.3L228.5 89.7L226.8 83.5L231.1 80.1L233.8 78.3L237.2 78.3L240.7 83.5L243.3 88.8L246.0 92.3L247.7 96.6L246.8 96.6L245.1 92.3L247.7 87.0L249.5 85.3L252.1 85.3L252.1 79.2L249.5 78.3L246.0 78.3L251.2 76.6L256.4 78.3L259.9 76.6L263.4 71.3L263.4 69.6L266.9 67.8L269.5 67.0L269.5 64.4L267.8 61.7L270.4 60.0L274.8 58.3L279.1 55.6L283.5 52.1L287.8 45.2L293.1 43.4L298.3 39.9L305.3 39.1L312.3 38.2L312.3 41.7L303.5 43.4L296.6 46.9L287.8 49.5L280.9 55.6L277.4 60.9L273.9 64.4L270.4 67.8L266.9 69.6L263.4 73.1L259.9 74.8L254.7 78.3L251.2 80.1L248.6 83.5L244.2 81.8L240.7 78.3L235.5 74.8L230.3 73.1L225.0 71.3L219.8 69.6L214.6 66.1L209.3 62.6L202.4 59.1L195.4 57.4L188.4 57.4L183.2 59.1L179.7 61.7 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M271.3 70.5L273.9 68.7L277.4 67.0L279.1 66.1L280.9 63.5L283.5 60.0L280.0 58.3L278.2 61.7L276.5 66.1L273.9 67.8L271.3 69.6L271.3 70.5 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M261.7 81.8L263.4 81.8L266.0 85.3L266.9 90.5L265.2 92.3L262.5 91.4L260.8 88.8L261.7 85.3L261.7 81.8 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M239.9 102.7L246.0 99.2L251.2 97.5L256.4 95.8L259.9 94.0L258.2 99.2L252.1 101.0L246.0 101.0L240.7 104.5L239.9 102.7 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M280.0 99.2L284.3 101.9L288.7 104.5L286.1 106.2L280.0 104.5L280.0 99.2 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M255.6 116.7L263.4 112.3L269.5 109.7L275.6 108.0L280.9 107.1L284.3 109.7L287.8 114.9L290.4 119.3L290.4 125.4L287.8 129.8L284.3 131.5L279.1 130.6L274.8 127.2L268.6 125.4L265.2 127.2L257.3 127.2L256.4 121.9L255.6 119.3L255.6 116.7 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M284.3 133.3L286.1 133.3L286.1 135.0L284.3 135.0 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/><path d="M301.8 133.3L303.5 131.5L307.0 129.8L309.6 129.8L312.3 131.5L309.6 133.3L306.1 135.0L303.5 137.6L301.8 137.6L301.8 133.3 Z" fill="#E4D3B4" stroke="#7A6854" stroke-width="0.6" stroke-linejoin="round"/>
+    <circle cx="267.8" cy="64.7" r="6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="1"/><text x="267.8" y="67.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#F5F0E6">1</text><circle cx="287.1" cy="128.3" r="6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="1"/><text x="287.1" y="130.7" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#F5F0E6">2</text><circle cx="224.3" cy="72.5" r="6" fill="#8A5600" stroke="#F5F0E6" stroke-width="1"/><text x="224.3" y="74.9" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#F5F0E6">3</text><circle cx="288.9" cy="127.0" r="2.2" fill="#0E6A6A"/><circle cx="299.9" cy="118.0" r="6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="1"/><text x="299.9" y="120.4" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="#F5F0E6">4</text><circle cx="287.1" cy="128.3" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="287.1" cy="128.3" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="309.4" cy="133.5" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="262.5" cy="84.8" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="267.8" cy="64.7" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="181.6" cy="120.0" r="2.6" fill="#1E6B45" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="189.1" cy="98.6" r="2.6" fill="#1E6B45" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="224.3" cy="72.5" r="2.6" fill="#8A5600" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="156.9" cy="52.6" r="2.6" fill="#1F4E8C" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="163.8" cy="55.1" r="2.6" fill="#1F4E8C" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="287.1" cy="128.3" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="287.1" cy="128.3" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="288.9" cy="127.0" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="309.4" cy="133.5" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="309.4" cy="133.5" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="309.4" cy="133.5" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="303.5" cy="113.2" r="2.6" fill="#0E6A6A" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="278.8" cy="66.4" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="256.6" cy="78.0" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="267.8" cy="64.7" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="267.8" cy="64.7" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="262.5" cy="84.8" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="265.4" cy="91.4" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="262.5" cy="84.8" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="258.5" cy="62.7" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="258.5" cy="62.7" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="267.8" cy="64.7" r="2.6" fill="#9C2B24" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="227.0" cy="86.1" r="2.6" fill="#8A5600" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="224.3" cy="72.5" r="2.6" fill="#8A5600" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="220.6" cy="80.9" r="2.6" fill="#8A5600" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="156.8" cy="92.6" r="2.6" fill="#1E6B45" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="163.5" cy="89.6" r="2.6" fill="#1E6B45" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="187.7" cy="69.8" r="2.6" fill="#6A3A86" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="187.8" cy="69.7" r="2.6" fill="#6A3A86" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="195.7" cy="68.4" r="2.6" fill="#6A3A86" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="92.4" cy="62.0" r="2.6" fill="#3E4C22" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="92.4" cy="62.0" r="2.6" fill="#3E4C22" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="75.4" cy="60.8" r="2.6" fill="#3E4C22" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="106.1" cy="127.7" r="2.6" fill="#3E4C22" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="92.4" cy="62.0" r="2.6" fill="#3E4C22" stroke="#F5F0E6" stroke-width="0.6"/><circle cx="177.5" cy="45.3" r="2.6" fill="#1F4E8C" stroke="#F5F0E6" stroke-width="0.6"/>
+    <text x="89.0" y="56.5" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">New York</text><text x="143.0" y="47.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">London</text><text x="184.9" y="38.2" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">Helsinki</text><text x="211.1" y="80.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">Delhi</text><text x="251.2" y="59.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">Seoul</text><text x="289.6" y="71.3" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">Tokyo</text><text x="247.7" y="90.5" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">Manila</text><text x="266.9" y="121.9" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">Canberra</text><text x="294.8" y="141.1" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">NZ</text><text x="164.0" y="88.8" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">Africa</text><text x="95.9" y="113.2" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1C1612" stroke="#F4EFE6" stroke-width="2" paint-order="stroke" stroke-linejoin="round">Argentina</text>
+  </svg></div>
+      <div></div>
+      <div class="briefs"><div class="bcol"><h3 style="color:#0E6A6A">OCEANIA</h3><p>Gas exports reserve up to 20% <span class="tag" style="color:#1E6B45">CONF</span></p><p>&quot;America&#39;s AI back-up&quot;, ACS warns <span class="tag" style="color:#1F4E8C">REP</span></p><p>Minns quits presser over Gaza <span class="tag" style="color:#1E6B45">CONF</span></p><p>Grigg on medical leave, cancer <span class="tag" style="color:#1E6B45">OFF</span></p><p>Luxon: pay equity for next govt <span class="tag" style="color:#1F4E8C">REP</span></p><p>Fonterra may dump raw milk in bulk <span class="tag" style="color:#1F4E8C">REP</span></p><p>Pacific ministers: COP31 bad faith <span class="tag" style="color:#1F4E8C">REP</span></p><h3 style="color:#6A3A86">MIDDLE EAST</h3><p>Likud–Yashar round ends, no deal <span class="tag" style="color:#1F4E8C">REP</span></p><p>West Bank arson blamed on settlers <span class="tag" style="color:#1F4E8C">REP</span></p><p>Jurf al-Sakhar weighed against KH <span class="tag" style="color:#5C564C">NOTE</span></p></div><div class="bcol"><h3 style="color:#9C2B24">EAST ASIA</h3><p>Japan shut, Labour Thanksgiving <span class="tag" style="color:#1E6B45">OFF</span></p><p>HK turnout 98.79%; Chan, Tong lose <span class="tag" style="color:#1F4E8C">REP</span></p><p>Trump sought Kim summit, paper <span class="tag" style="color:#9C2B24">CLAIM</span></p><p>NIS chief replacement under review <span class="tag" style="color:#1F4E8C">REP</span></p><p>₱241bn patronage aid flagged, 2027 <span class="tag" style="color:#1F4E8C">REP</span></p><p>Maguindanao: 58 killed, kin wait <span class="tag" style="color:#1E6B45">CONF</span></p><p>4m new voters expected for 2028 <span class="tag" style="color:#1F4E8C">REP</span></p><p>Beijing: drop US telecom curbs <span class="tag" style="color:#9C2B24">CLAIM</span></p><p>Caixin: Huang exit tests Nvidia, AI <span class="tag" style="color:#1F4E8C">REP</span></p><p>Won about 1,338.8 per dollar <span class="tag" style="color:#1E6B45">CONF</span></p><h3 style="color:#1F4E8C">EUROPE</h3><p>Sparta II towed from Finnish waters <span class="tag" style="color:#1F4E8C">REP</span></p></div><div class="bcol"><h3 style="color:#8A5600">SOUTH ASIA</h3><p>TN and Kerala rain; fog in the north <span class="tag" style="color:#0E6A6A">FCST</span></p><p>Hydropower due, Shah–Modi talks <span class="tag" style="color:#8A5600">SCHED</span></p><p>Indian shares to open up on inflows <span class="tag" style="color:#1F4E8C">REP</span></p><h3 style="color:#1E6B45">AFRICA</h3><p>Ghana debt service to weigh on cedi <span class="tag" style="color:#1F4E8C">REP</span></p><p>₦250m for Bayelsa families, Tinubu <span class="tag" style="color:#1E6B45">OFF</span></p><h3 style="color:#3E4C22">AMERICAS</h3><p>Nasdaq-100 +~3%, S&amp;P +2% <span class="tag" style="color:#1E6B45">CONF</span></p><p>Dell earnings, PCE due this week <span class="tag" style="color:#8A5600">SCHED</span></p><p>68 lead-azide barrels due in Iowa <span class="tag" style="color:#8A5600">SCHED</span></p><p>Argentina–China biogas hub planned <span class="tag" style="color:#1F4E8C">REP</span></p><p>Dollar edges off a 19-month high <span class="tag" style="color:#1F4E8C">REP</span></p></div></div>
+    </section>
+    <div></div>
+    <p class="datecheck"><strong>DATE CHECK — not shown as Monday news:</strong> Sun 22 — Antalya Pact not adopted; Merkury sunk at Benghazi; drones kill 6 in Kyiv region; Alcaraz d. Zverev; Márquez 8th MotoGP title; Liverpool 4–0 Man Utd; Choi resigns; Serang factory fire; Bessent on Nvidia China sales; Democrats 258 House seats; Golden Horse; Bayelsa toll 29. Earlier — El Chapo Isidro captured; Sparta II hit; Taiwan short-sale curbs; Nasdaq −10% week; Trump–Xi–Putin summit; Riemann AI proof; ICJ Myanmar. Not yet at ~03:10 UTC: Shah–Modi joint statement; Test result; most Europe/Americas Monday news (London not yet open).</p>
+    <footer>Sources: Reuters, Yonhap, SMH, RNZ, ABC, Philstar, Indian Express, Xinhua, Daily Maverick, SCMP … · File photos: public domain, see CREDITS.md · original drawings · rendered offline</footer>
+  </div>
+</body>
+</html>

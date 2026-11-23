@@ -1,0 +1,158 @@
+{
+  "title": "Monday 23 November 2026",
+  "kickerLeft": "THE DAY IN ONE PAGE",
+  "kickerRight": "45 STORIES · 7 REGIONS · MONDAY 23 NOVEMBER 2026",
+  "standfirst": "Asia's AI sell-off rolls on, COP31's collapse lands in Canberra, Nepal's PM in Delhi",
+  "zones": [
+    {"place": "Seoul 09:00 KST", "label": "KOSPI opens −2.8%"},
+    {"place": "Canberra AM", "label": "Taylor: \"Bowen has got to go\""},
+    {"place": "Wellington", "label": "NZ 207-5, in play"},
+    {"place": "Manila", "label": "jeepney strike day 1"},
+    {"place": "New Delhi", "label": "Shah–Modi talks"},
+    {"place": "London 14:30 GMT", "label": "Finance Bill (scheduled)"}
+  ],
+  "dateCheck": "DATE CHECK — not shown as Monday news: Sun 22 — Antalya Pact not adopted; Merkury sunk at Benghazi; drones kill 6 in Kyiv region; Alcaraz d. Zverev; Márquez 8th MotoGP title; Liverpool 4–0 Man Utd; Choi resigns; Serang factory fire; Bessent on Nvidia China sales; Democrats 258 House seats; Golden Horse; Bayelsa toll 29. Earlier — El Chapo Isidro captured; Sparta II hit; Taiwan short-sale curbs; Nasdaq −10% week; Trump–Xi–Putin summit; Riemann AI proof; ICJ Myanmar. Not yet at ~03:10 UTC: Shah–Modi joint statement; Test result; most Europe/Americas Monday news (London not yet open).",
+  "footer": "Sources: Reuters, Yonhap, SMH, RNZ, ABC, Philstar, Indian Express, Xinhua, Daily Maverick, SCMP … · File photos: public domain, see CREDITS.md · original drawings · rendered offline",
+  "regionOrder": ["OCE", "EAS", "SAS", "AFR", "MEA", "EUR", "AME"],
+  "stories": [
+    {
+      "id": "L1", "kind": "lead", "region": "EAS", "kicker": "Markets",
+      "headline": "Asia's AI sell-off\nrolls on into Monday",
+      "deck": "Opened −2.77% at 4,734.90. Samsung −3%, SK hynix −2.2%. Japan shut; fund ready.",
+      "source": "Reuters · Yonhap", "certainty": "CONFIRMED",
+      "place": "Seoul", "lon": 126.98, "lat": 37.57,
+      "photo": "photos/seoul-night-iss.jpg",
+      "credit": "File photo: Seoul at night from the ISS, 2025 · NASA",
+      "photoPosition": "center center",
+      "chip": "KOSPI −2.8% at open"
+    },
+    {
+      "id": "L2", "kind": "lead", "region": "OCE", "kicker": "Climate",
+      "headline": "COP31's collapse\nlands in Canberra",
+      "deck": "After Sunday's collapse. Taylor: Bowen \"has got to go\". NZ would have backed the text.",
+      "source": "SMH · RNZ · Reuters", "certainty": "REPORTED",
+      "place": "Canberra", "lon": 149.13, "lat": -35.28,
+      "photo": "photos/antalya-gulf-2010.jpg",
+      "credit": "File photo: Gulf of Antalya from the ISS, 2010 · NASA",
+      "photoPosition": "center center"
+    },
+    {
+      "id": "L3", "kind": "lead", "region": "SAS", "kicker": "Diplomacy",
+      "headline": "Shah to meet Modi\nin New Delhi",
+      "deck": "Due today: energy, hydropower, trade and connectivity. No statement yet.",
+      "source": "Indian Express · Nepal MoFA", "certainty": "SCHEDULED",
+      "place": "New Delhi", "lon": 77.21, "lat": 28.61,
+      "photo": "photos/modi-2025.jpg",
+      "credit": "File photo: Modi, 2025 · White House",
+      "photoPosition": "center 20%"
+    },
+    {
+      "id": "L4", "kind": "lead", "region": "OCE", "kicker": "Obituary",
+      "headline": "Molly Meldrum\ndies at 83",
+      "deck": "Albanese: \"Molly Meldrum loved music almost as much as we loved him.\"",
+      "source": "SMH · RNZ", "certainty": "CONFIRMED",
+      "place": "Australia", "lon": 151.21, "lat": -33.87
+    },
+    {
+      "id": "M5", "kind": "mid", "region": "OCE", "kicker": "Health",
+      "headline": "A$25 PBS fee held to 2030",
+      "deck": "Freeze costs A$242m.",
+      "source": "PM release · ABC", "certainty": "OFFICIAL",
+      "place": "Canberra", "lon": 149.13, "lat": -35.28
+    },
+    {
+      "id": "M6", "kind": "mid", "region": "OCE", "kicker": "Poll",
+      "headline": "Taylor overtakes Albanese",
+      "deck": "Labor 27, ON 27, LNP 22.",
+      "source": "The Australian", "certainty": "REPORTED",
+      "place": "Australia", "lon": 149.13, "lat": -35.28
+    },
+    {
+      "id": "M7", "kind": "mid", "region": "OCE", "kicker": "Sport",
+      "headline": "NZ 207-5, still in play",
+      "deck": "Mitchell, Phillips; trail 145.",
+      "source": "Cricinfo · Cricbuzz", "certainty": "IN PLAY",
+      "place": "Wellington", "lon": 174.78, "lat": -41.3
+    },
+    {
+      "id": "M8", "kind": "mid", "region": "EAS", "kicker": "Transport",
+      "headline": "Jeepney strike, day one",
+      "deck": "6,000+ police; free rides.",
+      "source": "Philstar · Inquirer", "certainty": "CONFIRMED",
+      "place": "Manila", "lon": 120.98, "lat": 14.6
+    },
+    {
+      "id": "M9", "kind": "mid", "region": "EAS", "kicker": "Seoul",
+      "headline": "Lee orders exam overhaul",
+      "deck": "Minister quit over AI.",
+      "source": "Yonhap", "certainty": "REPORTED",
+      "place": "Seoul", "lon": 126.98, "lat": 37.57
+    },
+    {
+      "id": "M10", "kind": "mid", "region": "AFR", "kicker": "Politics",
+      "headline": "DA offers 93 mayoralties",
+      "deck": "137 councils, ActionSA no",
+      "source": "Daily Maverick", "certainty": "REPORTED",
+      "place": "Pretoria", "lon": 28.19, "lat": -25.75
+    },
+    {
+      "id": "M11", "kind": "mid", "region": "AFR", "kicker": "Diplomacy",
+      "headline": "Kenya, DRC restore ties",
+      "deck": "Agree to fully restore ties.",
+      "source": "Xinhua", "certainty": "REPORTED",
+      "place": "Nairobi", "lon": 36.82, "lat": -1.29
+    },
+    {
+      "id": "M12", "kind": "mid", "region": "SAS", "kicker": "Migration",
+      "headline": "1,389 children held in US",
+      "deck": "In US custody four years.",
+      "source": "Times of India", "certainty": "REPORTED",
+      "place": "New Delhi", "lon": 77.21, "lat": 28.61
+    },
+    {
+      "id": "M13", "kind": "mid", "region": "EUR", "kicker": "Westminster",
+      "headline": "Finance Bill set for MPs",
+      "deck": "Amendments already in.",
+      "source": "Hansard Society", "certainty": "SCHEDULED",
+      "place": "London", "lon": -0.13, "lat": 51.5
+    },
+    {
+      "id": "M14", "kind": "mid", "region": "EUR", "kicker": "Parliament",
+      "headline": "Strasbourg plenary is set",
+      "deck": "Art. 7 Tue; athlete ban.",
+      "source": "European Parliament", "certainty": "SCHEDULED",
+      "place": "Strasbourg", "lon": 7.75, "lat": 48.58
+    },
+    {"id": "B15", "kind": "brief", "region": "OCE", "brief": "Gas exports reserve up to 20%", "certainty": "CONFIRMED", "source": "SMH", "place": "Canberra", "lon": 149.13, "lat": -35.28},
+    {"id": "B16", "kind": "brief", "region": "OCE", "brief": "\"America's AI back-up\", ACS warns", "certainty": "REPORTED", "source": "SMH", "place": "Canberra", "lon": 149.13, "lat": -35.28},
+    {"id": "B17", "kind": "brief", "region": "OCE", "brief": "Minns quits presser over Gaza", "certainty": "CONFIRMED", "source": "SMH", "place": "Sydney", "lon": 151.21, "lat": -33.87},
+    {"id": "B18", "kind": "brief", "region": "OCE", "brief": "Grigg on medical leave, cancer", "certainty": "OFFICIAL", "source": "RNZ", "place": "Wellington", "lon": 174.78, "lat": -41.29},
+    {"id": "B19", "kind": "brief", "region": "OCE", "brief": "Luxon: pay equity for next govt", "certainty": "REPORTED", "source": "RNZ", "place": "Wellington", "lon": 174.78, "lat": -41.29},
+    {"id": "B20", "kind": "brief", "region": "OCE", "brief": "Fonterra may dump raw milk in bulk", "certainty": "REPORTED", "source": "RNZ", "place": "New Zealand", "lon": 174.78, "lat": -41.29},
+    {"id": "B21", "kind": "brief", "region": "OCE", "brief": "Pacific ministers: COP31 bad faith", "certainty": "REPORTED", "source": "RNZ Pacific", "place": "Pacific", "lon": 168.0, "lat": -18.0},
+    {"id": "B22", "kind": "brief", "region": "EAS", "brief": "Japan shut, Labour Thanksgiving", "certainty": "OFFICIAL", "source": "Reuters", "place": "Tokyo", "lon": 139.69, "lat": 35.68},
+    {"id": "B24", "kind": "brief", "region": "EAS", "brief": "HK turnout 98.79%; Chan, Tong lose", "certainty": "REPORTED", "source": "SCMP", "place": "Hong Kong", "lon": 114.17, "lat": 22.32},
+    {"id": "B25", "kind": "brief", "region": "EAS", "brief": "Trump sought Kim summit, paper", "certainty": "CLAIM", "source": "Korea JoongAng Daily", "place": "Seoul", "lon": 126.98, "lat": 37.57},
+    {"id": "B26", "kind": "brief", "region": "EAS", "brief": "NIS chief replacement under review", "certainty": "REPORTED", "source": "Hankook Ilbo", "place": "Seoul", "lon": 126.98, "lat": 37.57},
+    {"id": "B27", "kind": "brief", "region": "EAS", "brief": "₱241bn patronage aid flagged, 2027", "certainty": "REPORTED", "source": "Philstar", "place": "Manila", "lon": 120.98, "lat": 14.6},
+    {"id": "B28", "kind": "brief", "region": "EAS", "brief": "Maguindanao: 58 killed, kin wait", "certainty": "CONFIRMED", "source": "Philstar", "place": "Maguindanao", "lon": 124.24, "lat": 7.0},
+    {"id": "B29", "kind": "brief", "region": "EAS", "brief": "4m new voters expected for 2028", "certainty": "REPORTED", "source": "Philstar", "place": "Manila", "lon": 120.98, "lat": 14.6},
+    {"id": "B30", "kind": "brief", "region": "EAS", "brief": "Beijing: drop US telecom curbs", "certainty": "CLAIM", "source": "China Daily", "place": "Beijing", "lon": 116.41, "lat": 39.9},
+    {"id": "B31", "kind": "brief", "region": "EAS", "brief": "Caixin: Huang exit tests Nvidia, AI", "certainty": "REPORTED", "source": "Caixin", "place": "Beijing", "lon": 116.41, "lat": 39.9},
+    {"id": "B44", "kind": "brief", "region": "EAS", "brief": "Won about 1,338.8 per dollar", "certainty": "CONFIRMED", "source": "Yonhap", "place": "Seoul", "lon": 126.98, "lat": 37.57},
+    {"id": "B32", "kind": "brief", "region": "SAS", "brief": "TN and Kerala rain; fog in the north", "certainty": "FORECAST", "source": "IMD", "place": "Chennai", "lon": 80.27, "lat": 13.08},
+    {"id": "B33", "kind": "brief", "region": "SAS", "brief": "Hydropower due, Shah–Modi talks", "certainty": "SCHEDULED", "source": "Indian Express", "place": "New Delhi", "lon": 77.21, "lat": 28.61},
+    {"id": "B45", "kind": "brief", "region": "SAS", "brief": "Indian shares to open up on inflows", "certainty": "REPORTED", "source": "Reuters", "place": "Mumbai", "lon": 72.88, "lat": 19.08},
+    {"id": "B34", "kind": "brief", "region": "AFR", "brief": "Ghana debt service to weigh on cedi", "certainty": "REPORTED", "source": "MyJoyOnline", "place": "Accra", "lon": -0.19, "lat": 5.6},
+    {"id": "B35", "kind": "brief", "region": "AFR", "brief": "₦250m for Bayelsa families, Tinubu", "certainty": "OFFICIAL", "source": "Punch", "place": "Abuja", "lon": 7.49, "lat": 9.08},
+    {"id": "B36", "kind": "brief", "region": "MEA", "brief": "Likud–Yashar round ends, no deal", "certainty": "REPORTED", "source": "Al Arabiya", "place": "Jerusalem", "lon": 35.21, "lat": 31.77},
+    {"id": "B37", "kind": "brief", "region": "MEA", "brief": "West Bank arson blamed on settlers", "certainty": "REPORTED", "source": "SCMP", "place": "West Bank", "lon": 35.26, "lat": 31.9},
+    {"id": "B38", "kind": "brief", "region": "MEA", "brief": "Jurf al-Sakhar weighed against KH", "certainty": "ANALYSIS", "source": "Al-Monitor", "place": "Baghdad", "lon": 44.37, "lat": 33.32},
+    {"id": "B39", "kind": "brief", "region": "AME", "brief": "Nasdaq-100 +~3%, S&P +2%", "certainty": "CONFIRMED", "source": "Reuters", "place": "New York", "lon": -74.01, "lat": 40.71},
+    {"id": "B40", "kind": "brief", "region": "AME", "brief": "Dell earnings, PCE due this week", "certainty": "SCHEDULED", "source": "Market Sunrise", "place": "New York", "lon": -74.01, "lat": 40.71},
+    {"id": "B41", "kind": "brief", "region": "AME", "brief": "68 lead-azide barrels due in Iowa", "certainty": "SCHEDULED", "source": "Reuters", "place": "Iowa", "lon": -93.5, "lat": 42.03},
+    {"id": "B42", "kind": "brief", "region": "AME", "brief": "Argentina–China biogas hub planned", "certainty": "REPORTED", "source": "SCMP", "place": "Argentina", "lon": -58.38, "lat": -34.6},
+    {"id": "B46", "kind": "brief", "region": "AME", "brief": "Dollar edges off a 19-month high", "certainty": "REPORTED", "source": "Reuters", "place": "New York", "lon": -74.01, "lat": 40.71},
+    {"id": "B43", "kind": "brief", "region": "EUR", "brief": "Sparta II towed from Finnish waters", "certainty": "REPORTED", "source": "Reuters", "place": "Finland", "lon": 23.5, "lat": 59.8}
+  ]
+}
